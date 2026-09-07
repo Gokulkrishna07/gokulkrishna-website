@@ -15,8 +15,6 @@ dist-ssr
 coverage
 api/node_modules
 
-.claude
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

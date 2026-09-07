@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Gokulkrishna A B">
+  <rect width="64" height="64" rx="13" fill="#0a0a0a" />
+  <!-- Terminal prompt: chevron plus caret bar, drawn as heavy strokes filling most
+       of the tile so both marks survive the downscale to a 16px tab icon. -->
+  <path
+    d="M15 18 L30 32 L15 46"
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="9"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path d="M37 46 H51" fill="none" stroke="#e02435" stroke-width="9" stroke-linecap="round" />
+</svg>

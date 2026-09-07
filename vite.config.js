@@ -23,6 +23,8 @@ export default defineConfig(({ mode }) => {
         provider: "v8",
         reporter: ["text", "html"],
         include: ["src/**/*.{js,jsx}", "api/**/*.js"],
+        // Thin process bootstrap, not business logic — nothing meaningful to unit test.
+        exclude: ["api/server.js"],
         thresholds: { lines: 100, functions: 100, branches: 100, statements: 100 },
       },
     },

@@ -3,8 +3,16 @@ import { ArrowUpRight } from "lucide-react";
 import Navbar from "../components/Navbar";
 import TechIcon from "../components/TechIcon";
 import { PROJECTS } from "../data/projects";
+import { useSEO } from "../lib/seo";
 
 export default function Projects() {
+  useSEO({
+    title: "Projects — Gokulkrishna A B",
+    description:
+      "Cloud and DevOps projects by Gokulkrishna A B: Kubernetes microservices platforms, CI/CD pipelines, API gateways and infrastructure automation shipped to production.",
+    path: "/projects",
+  });
+
   return (
     <main className="min-h-screen bg-neutral-950">
       <Navbar />

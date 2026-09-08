@@ -3,6 +3,7 @@ import { ArrowUpRight, PenLine } from "lucide-react";
 import Navbar from "../components/Navbar";
 import TechIcon from "../components/TechIcon";
 import { POSTS } from "../data/posts";
+import { useSEO } from "../lib/seo";
 
 function Meta({ post }) {
   return (
@@ -44,6 +45,13 @@ function Wrapper({ post, children, className }) {
 
 export default function Blog() {
   const [featured, ...rest] = POSTS;
+
+  useSEO({
+    title: "Blog — Gokulkrishna A B",
+    description:
+      "Writing on DevOps, Kubernetes, LLMOps and cloud infrastructure by Gokulkrishna A B, Cloud and DevOps engineer based in Ernakulam, Kerala, India.",
+    path: "/blog",
+  });
 
   return (
     <main className="min-h-screen bg-neutral-950">

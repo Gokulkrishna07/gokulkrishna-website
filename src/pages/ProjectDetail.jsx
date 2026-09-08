@@ -5,6 +5,7 @@ import TechIcon from "../components/TechIcon";
 import { PROJECTS, getProject } from "../data/projects";
 import { useEffect } from "react";
 import { track } from "../lib/analytics";
+import { useSEO } from "../lib/seo";
 
 export default function ProjectDetail() {
   const { slug } = useParams();
@@ -13,6 +14,14 @@ export default function ProjectDetail() {
   useEffect(() => {
     if (project) track("Project Viewed", { slug: project.slug, title: project.title });
   }, [project]);
+
+  useSEO({
+    title: project ? `${project.title} — Gokulkrishna A B` : "Project — Gokulkrishna A B",
+    description: project
+      ? project.description
+      : "A cloud and DevOps project by Gokulkrishna A B.",
+    path: `/projects/${slug}`,
+  });
 
   if (!project) return <Navigate to="/projects" replace />;
 

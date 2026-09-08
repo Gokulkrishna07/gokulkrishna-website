@@ -11,6 +11,7 @@ import {
   Wrench,
 } from "lucide-react";
 import Navbar from "../components/Navbar";
+import { useSEO } from "../lib/seo";
 
 const SKILL_GROUPS = [
   {
@@ -56,6 +57,13 @@ const SKILL_GROUPS = [
 ];
 
 export default function Skills() {
+  useSEO({
+    title: "Skills — Gokulkrishna A B",
+    description:
+      "Technical skills of Gokulkrishna A B: Kubernetes, Docker, Terraform, GitHub Actions, AWS, DigitalOcean, Prometheus, Grafana, APISIX and cloud infrastructure automation.",
+    path: "/skills",
+  });
+
   return (
     <main className="min-h-screen bg-neutral-950">
       <Navbar />

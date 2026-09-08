@@ -6,6 +6,7 @@ import TechMarquee from "../components/TechMarquee";
 import ArchitectureDiagram from "../components/ArchitectureDiagram";
 import AboutSection from "../components/AboutSection";
 import ExperienceSection from "../components/ExperienceSection";
+import { useSEO } from "../lib/seo";
 
 const STATS = [
   { value: "2+", label: "Years Experience" },
@@ -17,6 +18,13 @@ const VIDEO_SRC =
   "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260606_154941_df1a96e1-a06f-450c-bd02-d863414cc1a0.mp4";
 
 export default function Home() {
+  useSEO({
+    title: "Gokulkrishna A B — Cloud & DevOps Engineer",
+    description:
+      "Gokulkrishna A B is a Cloud and DevOps engineer based in Ernakulam, Kerala, India, working with Kubernetes, Docker, Terraform, GitHub Actions and AWS to build and ship production infrastructure.",
+    path: "/",
+  });
+
   return (
     <main className="bg-neutral-950">
       <div className="relative h-screen w-full overflow-hidden">

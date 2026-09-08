@@ -6,6 +6,7 @@ import PodiumText from "../components/PodiumText";
 import { getPost } from "../data/posts";
 import { useEffect } from "react";
 import { track } from "../lib/analytics";
+import { useSEO } from "../lib/seo";
 
 export default function BlogPost() {
   const { slug } = useParams();
@@ -16,6 +17,12 @@ export default function BlogPost() {
       track("Blog Post Read", { slug: post.slug, title: post.title });
     }
   }, [post]);
+
+  useSEO({
+    title: post ? `${post.title} — Gokulkrishna A B` : "Blog — Gokulkrishna A B",
+    description: post ? post.summary : "Writing by Gokulkrishna A B.",
+    path: `/blog/${slug}`,
+  });
 
   if (!post || post.status !== "published") return <Navigate to="/blog" replace />;
 

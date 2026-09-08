@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight, Briefcase, Code2, Mail, MapPin, Phone } from "lucide-react";
 import Navbar from "../components/Navbar";
 import { track } from "../lib/analytics";
+import { useSEO } from "../lib/seo";
 
 const EMAIL = "gokulkrishnaab7@gmail.com";
 
@@ -38,6 +39,13 @@ const CHANNELS = [
 ];
 
 export default function Contact() {
+  useSEO({
+    title: "Contact — Gokulkrishna A B",
+    description:
+      "Get in touch with Gokulkrishna A B, Cloud and DevOps engineer based in Ernakulam, Kerala, India. Email, phone, LinkedIn and GitHub.",
+    path: "/contact",
+  });
+
   return (
     <main className="min-h-screen bg-neutral-950">
       <Navbar />
